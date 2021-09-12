@@ -87,47 +87,64 @@
       </div>
     </nav>
     <br />
-    <div id="Update">
-      <div class="row container">
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <h3>Add More Products</h3>
+    <div class = "container">
+		<div class=" row " >
+			<div class="col-4 card">Photo</div>
+			<div class="col-8 card">
+			Product : Bottle<br>
+			Product Id : 12345
+			<div style="color: darkred;"><% if(arr[0]===1) {%>
+            <span>VERIFIED</span>
+            <% } %>
+            <% if(arr[0]===0) { %>
+                <span>NOT VERIFIED</span>
+            <% } %>
             </div>
-            <div class="card-body">
-              <p>Expand your Catalog</p>
-              <button type="button" class="btn btn-lg btn-block btn-dark">
-                ADD
-              </button>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call0()">VERIFY</button></div>
+		</div>
+			<div class="col-4 card">Photo</div>
+			<div class="col-8 card">
+			Product : Pen<br>
+			Product Id : 12345
+			<div style="color: darkred;"><% if(arr[1]===1) {%>
+            <span>VERIFIED</span>
+            <% } %>
+            <% if(arr[1]===0) { %>
+                <span>NOT VERIFIED</span>
+            <% } %>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-header">
-              <h3>Your Orders</h3>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call1()">VERIFY</button></div>
+		</div>
+            <div class="col-4 card">Photo</div>
+			<div class="col-8 card">
+			Product : Cell Phone<br>
+			Product Id : 12345
+			<div style="color: darkred;"><% if(arr[2]===1) {%>
+            <span>VERIFIED</span>
+            <% } %>
+            <% if(arr[2]===0) { %>
+                <span>NOT VERIFIED</span>
+            <% } %>
             </div>
-            <div class="card-body">
-              <div>
-                <button id="Orders" onclick="Page()">Your Orders</button>
-              </div>
-              <hr />
-              <div>
-                <button>Return Requests</button>
-              </div>
-              <hr />
-              <div>
-                <button>Unshipped</button>
-              </div>
-              <hr />
-              <div>
-                <button>Sold</button>
-              </div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call2()">VERIFY</button></div>
+		</div>
+            <div class="col-4 card">Photo</div>
+			<div class="col-8 card">
+			Product : remote<br>
+			Product Id : 12345
+			<div style="color: darkred;"><% if(arr[3]===1) {%>
+            <span>VERIFIED</span>
+            <% } %>
+            <% if(arr[3]===0) { %>
+                <span>NOT VERIFIED</span>
+            <% } %>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call3()">VERIFY</button></div>
+		</div>
+		</div>
+			
+		</div>
+	</div>
     <div id="hell"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -135,8 +152,17 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function Page() {
-        location.replace(`http://localhost:8080/products/`);
+      function call0() {
+        location.replace(`http://localhost:8080/verify/0`);
+      }
+      function call1() {
+        location.replace(`http://localhost:8080/verify/1`);
+      }
+      function call2() {
+        location.replace(`http://localhost:8080/verify/2`);
+      }
+      function call3() {
+        location.replace(`http://localhost:8080/verify/3`);
       }
     </script>
   </body>
