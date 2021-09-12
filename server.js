@@ -19,7 +19,8 @@ app.set('view engine', 'ejs');
 
 app.get("/products",(req,res)=>{
     console.log("req recieved");
-    res.sendFile(__dirname+"/sample.html");
+    let obj={arr,brr};
+    res.render("verify",obj);
 });
 
 
@@ -36,7 +37,9 @@ app.post("/verify/:tagid",(req,res)=>{
     console.log("Verification attempted");
     let id=req.params.tagid;
     //res.render("/sample.html",{id,str});
-    res.send("done!"); 
+    arr[id]=1;
+    res.send("done!");
+    console.log(arr);
 });
 
 

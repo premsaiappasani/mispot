@@ -136,7 +136,7 @@
     ></script>
     <script>
       function Page() {
-        console.log("hii");
+        let id = document.getElementById("id").innerText;
         document.getElementById("Update").innerHTML =
           '<div class = "container">\
 		<div class=" row " >\
@@ -144,7 +144,7 @@
 			<div class="col-8 card">\
 			Product : Bottle<br>\
 			Product Id : <span id="id">0</span>\
-			<div style="color: darkred;">NOT VERIFIED!!</div>\
+			<div style="color: darkred;"></div>\
 			<div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button onclick="call()">VERIFY</button></div>\
 			</div>\
 			<div class="col-4 card">Photo</div>\
