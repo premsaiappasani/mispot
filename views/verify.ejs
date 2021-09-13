@@ -128,18 +128,15 @@
     <!-- <div id="roll" class="spinner-grow" role="status" style="position: absolute; top: 50%; right: 50%;">
          <div class="sr-only"></div>
 </div> -->
-    <div id="roll">
-      <img
-        src="loadin.gif"
-        style="
-          height: 50%;
-          width: 30%;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-        "
-      />
+    <div
+      class="spinner-border"
+      style="display: block; margin-left: auto; margin-right: auto"
+      id="gif"
+      role="status"
+    >
+      <span class="sr-only"></span>
     </div>
+    <div id="roll"></div>
     <section id="demos" class="invisible" style="visibility: hidden">
       <h3 style="text-align: center">
         <span id="score">0</span>% Matched with <span id="str2"><%=str%></span>
@@ -224,6 +221,7 @@
       // Note: cocoSsd is an external object loaded from our index.html
       // script tag import so ignore any warning in Glitch.
       cocoSsd.load().then(function (loadedModel) {
+        document.getElementById("gif").remove();
         model = loadedModel;
         // Show demo section now model is ready to use.
         demosSection.classList.remove("invisible");
