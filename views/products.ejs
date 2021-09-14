@@ -32,7 +32,7 @@
       .col-lg-6 {
         padding-top: 5px;
       }
-      #VE {
+      #VE1, #VE2, #VE3, #VE4 {
         border: 1px solid limegreen;
       }
     </style>
@@ -93,53 +93,57 @@
 			<div class="col-8 card">
 			Product : Bottle<br>
 			Product Id : 12345
-			<div style="color: darkred;"><% if(arr[0]===1) {%>
-            <span>VERIFIED</span>
+			<div><% if(arr[0]===1) {%>
+        <script>document.getElementById("VE1").remove()</script>
+            <span style="color: green;">VERIFIED</span>
             <% } %>
             <% if(arr[0]===0) { %>
-                <span>NOT VERIFIED</span>
+                <span  style="color: darkred;">NOT VERIFIED</span>
             <% } %>
             </div>
-            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call0()">VERIFY</button></div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE1" onclick="call0()">VERIFY</button></div>
 		</div>
 			<div class="col-4 card">Photo</div>
 			<div class="col-8 card">
 			Product : Pen<br>
 			Product Id : 12345
-			<div style="color: darkred;"><% if(arr[1]===1) {%>
-            <span>VERIFIED</span>
+			<div><% if(arr[1]===1) {%>
+        <script>document.getElementById("VE2").remove()</script>
+            <span style="color: green;">VERIFIED</span>
             <% } %>
             <% if(arr[1]===0) { %>
-                <span>NOT VERIFIED</span>
+                <span style="color: darkred;">NOT VERIFIED</span>
             <% } %>
             </div>
-            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call1()">VERIFY</button></div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE2" onclick="call1()">VERIFY</button></div>
 		</div>
             <div class="col-4 card">Photo</div>
 			<div class="col-8 card">
 			Product : Cell Phone<br>
 			Product Id : 12345
-			<div style="color: darkred;"><% if(arr[2]===1) {%>
-            <span>VERIFIED</span>
+			<div><% if(arr[2]===1) {%>
+        <script>document.getElementById("VE3").remove()</script>
+            <span style="color: green;">VERIFIED</span>
             <% } %>
             <% if(arr[2]===0) { %>
-                <span>NOT VERIFIED</span>
+                <span  style="color: darkred;">NOT VERIFIED</span>
             <% } %>
             </div>
-            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call2()">VERIFY</button></div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE3" onclick="call2()">VERIFY</button></div>
 		</div>
             <div class="col-4 card">Photo</div>
 			<div class="col-8 card">
 			Product : remote<br>
 			Product Id : 12345
-			<div style="color: darkred;"><% if(arr[3]===1) {%>
-            <span>VERIFIED</span>
+			<div><% if(arr[3]===1) {%>
+        <script>document.getElementById("VE4").remove()</script>
+            <span style="color: green;">VERIFIED</span>
             <% } %>
             <% if(arr[3]===0) { %>
-                <span>NOT VERIFIED</span>
+                <span  style="color: darkred;">NOT VERIFIED</span>
             <% } %>
             </div>
-            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE" onclick="call3()">VERIFY</button></div>
+            <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE4" onclick="call3()">VERIFY</button></div>
 		</div>
 		</div>
 			

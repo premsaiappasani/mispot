@@ -7,7 +7,6 @@ app.use(express.json());
 
 
 
-
 app.use(express.urlencoded({
   extended: true
 }));
@@ -35,9 +34,9 @@ app.post("/verify/:tagid",(req,res)=>{
     let id=req.params.tagid;
     //res.render("/sample.html",{id,str});
     arr[id]=1;
-    console.log(arr);
     res.redirect('http://localhost:8080/products/');
 });
+
 
 
 
