@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 
 
 let arr=[0,0,0,0];
-let brr=['bottle','pen','cell phone','remote'];
+let brr=['bottle','book','teddy bear','backpack'];
 app.set('view engine', 'ejs');
 
 
