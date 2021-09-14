@@ -56,6 +56,8 @@ app.get("/success",(req,res)=>{
 
 
 
+app.use(express.static('public'));
+
 
 app.listen(8080,()=>{
     console.log("Listening");
