@@ -24,7 +24,8 @@
         color: #aaaaaa;
       }
       body {
-        background-color: #c1cfc0;
+        background-color: #151515;
+        background-repeat: no-repeat;
       }
 
       video {
@@ -136,7 +137,13 @@
 </div> -->
     <div
       class="spinner-border text-light"
-      style="display: block; margin-left: auto; margin-right: auto"
+      style="
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        align-self: center;
+      "
       id="gif"
       role="status"
     >
@@ -150,7 +157,15 @@
       <div id="liveView" class="camView">
         <button
           id="webcamButton"
-          style="display: block; margin-left: auto; margin-right: auto"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #e8f6e8;
+            margin: 1px solid grey;
+          "
         >
           Enable Webcam
         </button>
@@ -218,7 +233,6 @@
 
       // Pretend model has loaded so we can try out the webcam code.
       var model = true;
-      demosSection.classList.remove("invisible");
       var model = undefined;
 
       // Before we can use COCO-SSD class we must wait for it to finish

@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 
 
-
 app.use(express.urlencoded({
   extended: true
 }));
@@ -52,6 +51,7 @@ app.get("/success",(req,res)=>{
     console.log("Verification Success");
     res.sendFile(__dirname+"#");
 });
+
 
 
 
