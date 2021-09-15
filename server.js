@@ -29,15 +29,11 @@ app.get("/products",(req,res)=>{
 
 
 app.post("/verify/:tagid",(req,res)=>{
-    console.log("Verification attempted");
     let id=req.params.tagid;
     //res.render("/sample.html",{id,str});
     arr[id]=1;
-    console.log(req.body);
     let score=parseInt(req.body.score);
-    console.log(score);
     brr[id]=score;
-    console.log(brr);
     res.redirect('http://localhost:8080/products/');
 });
 
