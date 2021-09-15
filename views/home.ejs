@@ -120,10 +120,13 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-header">
-              <h3>Your Orders</h3>
+              <h3 style="position: relative;">Dashboard</h3>
             </div>
             <div class="card-body">
               <div>
+                <% if((arr[0]===0)||(arr[1]===0)||(arr[2]===0)||(arr[3]===0)) {%>
+                  <span style="color: red; font-weight: bold; position: absolute;">&bull;</span>
+                <% } %>
                 <button id="Orders" onclick="Page()">Your Orders</button>
               </div>
               <hr />

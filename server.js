@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 
 app.get("/home",(req,res)=>{
-    res.render('home');
+    res.render('home',{arr,brr});
 });
 
 
