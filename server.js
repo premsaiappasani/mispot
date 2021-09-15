@@ -21,6 +21,7 @@ app.get("/home",(req,res)=>{
 });
 
 
+
 app.get("/products",(req,res)=>{
     console.log("req recieved");
     let obj={arr,brr};

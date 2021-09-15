@@ -17,6 +17,9 @@
       hr {
         margin: 6px;
       }
+      progress{
+        display: block;
+      }
       button {
         margin-left: 8px;
         text-decoration: none;
@@ -106,11 +109,11 @@
 			Product Id : 16235
 			<div><% if(arr[0]===1) {%>
             <span style="color: green; margin-right: 10px;">VERIFIED </span>
-            <progress id="file1" value=<%= brr[0] %> max="100"> <%=brr[0] %>% </progress>
+            <progress title="% Matched" id="file1" value=<%= brr[0] %> max="100"> <%=brr[0] %>% </progress>
             <% } %>
             <% if(arr[0]===0) { %>
                 <span  style="color: darkred;">NOT VERIFIED</span>
-                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE1" onclick="call0()">VERIFY</button></div>
+                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button class="btn btn-outline-success" id="VE1" onclick="call0()">VERIFY</button></div>
             <% } %>
             </div>
 		</div>
@@ -120,11 +123,11 @@
 			Product Id : 15136
 			<div><% if(arr[1]===1) {%>
             <span style="color: green;">VERIFIED</span>
-            <progress id="file2" value=<%= brr[1] %> max="100"> <%=brr[1] %>% </progress>
+            <progress title="% Matched" id="file2" value=<%= brr[1] %> max="100"> <%=brr[1] %>% </progress>
             <% } %>
             <% if(arr[1]===0) { %>
                 <span style="color: darkred;">NOT VERIFIED</span>
-                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE2" onclick="call1()">VERIFY</button></div>
+                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button class="btn btn-outline-success" id="VE2" onclick="call1()">VERIFY</button></div>
             <% } %>
             </div>
 		</div>
@@ -134,11 +137,11 @@
 			Product Id : 26724
 			<div><% if(arr[2]===1) {%>
             <span style="color: green;">VERIFIED</span>
-            <progress id="file3" value=<%= brr[2] %> max="100"> <%=brr[2] %>% </progress>
+            <progress title="% Matched" id="file3" value=<%= brr[2] %> max="100"> <%=brr[2] %>% </progress>
             <% } %>
             <% if(arr[2]===0) { %>
                 <span  style="color: darkred;">NOT VERIFIED</span>
-                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE3" onclick="call2()">VERIFY</button></div>
+                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button class="btn btn-outline-success" id="VE3" onclick="call2()">VERIFY</button></div>
             <% } %>
             </div>
 		</div>
@@ -148,11 +151,11 @@
 			Product Id : 38563
 			<div><% if(arr[3]===1) {%>
             <span style="color: green;">VERIFIED</span>
-            <progress id="file4" value=<%= brr[3] %> max="100"> <%=brr[3] %>% </progress>
+            <progress title="% Matched" id="file4" value=<%= brr[3] %> max="100"> <%=brr[3] %>% </progress>
             <% } %>
             <% if(arr[3]===0) { %>
                 <span  style="color: darkred;">NOT VERIFIED</span>
-                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button id="VE4" onclick="call3()">VERIFY</button></div>
+                <div style="position: absolute;   right: 0px; top: 50%; transform: translate(-50%, -50%);"> <button class="btn btn-outline-success" id="VE4" onclick="call3()">VERIFY</button></div>
             <% } %>
             </div>
 		</div>
