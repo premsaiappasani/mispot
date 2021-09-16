@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Verify | Mispot</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -270,6 +271,7 @@
                   '<form id="dynForm" method="POST"><input id="ipt" name="score" value="0" type="hidden"></form>';
                 document.getElementById("ipt").value = h;
                 document.getElementById("dynForm").submit();
+                throw new Error("Waiting for the server");
               }
               liveView.appendChild(highlighter);
               liveView.appendChild(p);

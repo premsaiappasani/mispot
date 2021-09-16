@@ -5,6 +5,7 @@ const app = express();
 
 app.use(express.json());
 
+let gi=5;
 
 app.use(express.urlencoded({
   extended: true
@@ -17,14 +18,14 @@ app.set('view engine', 'ejs');
 
 
 app.get("/home",(req,res)=>{
-    res.render('home',{arr,brr});
+    res.render('home',{arr,brr,gi});
 });
 
 
 
 app.get("/products",(req,res)=>{
     console.log("req recieved");
-    let obj={arr,brr};
+    let obj={arr,brr,gi};
     res.render("products",obj);
 });
 
@@ -35,6 +36,7 @@ app.post("/verify/:tagid",(req,res)=>{
     arr[id]=1;
     let score=parseInt(req.body.score);
     brr[id]=score;
+    gi++;
     res.redirect('http://localhost:8080/products/');
 });
 
@@ -44,7 +46,7 @@ app.get("/verify/:tagid",(req,res)=>{
     let id=req.params.tagid;
     let id2=parseInt(id);
     let str=brr[id2];
-    let obj={id,str};
+    let obj={id,str,gi};
     res.render('verify',obj);
 });
 
