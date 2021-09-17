@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-let gi=5;
+let gi=0;
 
 app.use(express.urlencoded({
   extended: true
@@ -14,6 +14,7 @@ app.use(express.urlencoded({
 
 let arr=[0,0,0,0];
 let brr=['bottle','book','teddy bear','backpack'];
+let crr=[-1,-1,-1,-1];
 app.set('view engine', 'ejs');
 
 
@@ -36,7 +37,11 @@ app.post("/verify/:tagid",(req,res)=>{
     arr[id]=1;
     let score=parseInt(req.body.score);
     brr[id]=score;
-    gi++;
+    crr[id]=1;
+    gi=crr[0]+crr[1]+crr[2]+crr[3];
+    gi*=5;
+    gi/=4;
+    gi+=5;
     res.redirect('http://localhost:8080/products/');
 });
 
@@ -46,6 +51,11 @@ app.get("/verify/:tagid",(req,res)=>{
     let id=req.params.tagid;
     let id2=parseInt(id);
     let str=brr[id2];
+    crr[id2]=0;
+    gi=crr[0]+crr[1]+crr[2]+crr[3];
+    gi*=5;
+    gi/=4;
+    gi+=5;
     let obj={id,str,gi};
     res.render('verify',obj);
 });
